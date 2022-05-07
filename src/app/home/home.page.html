@@ -3,7 +3,7 @@
     <ion-searchbar placeholder="Destino" (ionChange)="buscarEndereco($event)"></ion-searchbar>
 
     <ion-list [hidden]="!listaEnderecos.length">
-        <ion-item *ngFor="let end of listaEnderecos" lines="full">
+        <ion-item *ngFor="let end of listaEnderecos" lines="full" (click)="tracarRota(end)">
             <ion-label class="ion-text-wrp">
                 {{end.description}}
             </ion-label>
